@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Proyecto_Final"
+             x:Class="Proyecto_Final.MainPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightGreen">
+            <Label x:Name="Titulo" Font="23" TextColor="White" HorizontalOptions="Center"/>
+            <ListView x:Name="Lista" ItemsSource="{Binding Items}" 
+                      CachingStrategy="RecycleElement" 
+                      ItemSelected="Lista_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Text="Matricula" Grid.Column="0" Grid.Row="0"></Label>
+                                <Label Text="{Binding Matricula}" Grid.Column="1" Grid.Row="0"></Label>
+                                <Label Text="Nombre" Grid.Column="0" Grid.Row="1"></Label>
+                                <Label Text="{Binding Nombre}" Grid.Column="1" Grid.Row="1"></Label>
+                                <Label Text="Apellido Paterno" Grid.Column="0" Grid.Row="2"></Label>
+                                <Label Text="{Binding ApellidoPaterno}" Grid.Column="1" Grid.Row="2"></Label>
+                                <Label Text="Apellido Materno" Grid.Column="0" Grid.Row="3"></Label>
+                                <Label Text="{Binding ApellidoMaterno}" Grid.Column="1" Grid.Row="3"></Label>
+                                <Label Text="Direccion" Grid.Column="0" Grid.Row="4"></Label>
+                                <Label Text="{Binding Direccion}" Grid.Column="1" Grid.Row="4"></Label>
+                                <Label Text="Telefono" Grid.Column="0" Grid.Row="5"></Label>
+                                <Label Text="{Binding Telefono}" Grid.Column="1" Grid.Row="5"></Label>
+                                <Label Text="Carrera" Grid.Column="0" Grid.Row="6"></Label>
+                                <Label Text="{Binding Carrera}" Grid.Column="1" Grid.Row="6"></Label>
+                                <Label Text="Semestre" Grid.Column="0" Grid.Row="7"></Label>
+                                <Label Text="{Binding Semestre}" Grid.Column="1" Grid.Row="7"></Label>
+                                <Label Text="Correo" Grid.Column="0" Grid.Row="8"></Label>
+                                <Label Text="{Binding Correo}" Grid.Column="1" Grid.Row="8"></Label>
+                                <Label Text="Github" Grid.Column="0" Grid.Row="9"></Label>
+                                <Label Text="{Binding Github}" Grid.Column="1" Grid.Row="9"></Label>
+                                <Label Text="Contraseña" Grid.Column="0" Grid.Row="10"/>
+                                <Label Text="{Binding Contraseña}" Grid.Column="1" Grid.Row="10"/>
+                                <Label Text="Tipo_Usuario" Grid.Column="0" Grid.Row="11"/>
+                                <Label Text="{Binding TipoUsuario}" Grid.Column="1" Grid.Row="11"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="Existentes" Text="Usuarios Existentes" HorizontalOptions="Center" Clicked="DB_Clicked" IsVisible="False" IsEnabled="False" BackgroundColor="Green" TextColor="White"/>
+            <Button x:Name="Eliminados" Text=" Usuarios Eliminados" HorizontalOptions="Center" Clicked="Eliminados_Clicked" IsEnabled="False" IsVisible="False" BackgroundColor="Green" TextColor="White"/>
+            <Button x:Name="User" Text="Mi Usuario" HorizontalOptions="Center" Clicked="User_Clicked" IsEnabled="False" IsVisible="False" BackgroundColor="Green" TextColor="White"/>
+            <Label x:Name="Titulo2"  Font="23" TextColor="White" HorizontalOptions="Center"/>
+            <ListView x:Name="ListaTarea" ItemsSource="{Binding Itemst}" 
+                      CachingStrategy="RecycleElement" 
+                      ItemSelected="ListaTarea_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Text="Numero de tarea" Grid.Column="0" Grid.Row="0"></Label>
+                                <Label Text="{Binding Id}" Grid.Column="1" Grid.Row="0"></Label>
+                                <Label Text="Correo" Grid.Column="0" Grid.Row="1"></Label>
+                                <Label Text="{Binding Correos}" Grid.Column="1" Grid.Row="1"></Label>
+                                <Label Text="Tarea" Grid.Column="0" Grid.Row="2"></Label>
+                                <Label Text="{Binding Tarea}" Grid.Column="1" Grid.Row="2"></Label>
+                                <Label Text="Estatus" Grid.Column="0" Grid.Row="3"></Label>
+                                <Label Text="{Binding Estatus}" Grid.Column="1" Grid.Row="3"></Label>
+                                <Label Text="Descripcion de la Tarea" Grid.Column="0" Grid.Row="4"></Label>
+                                <Label Text="{Binding Descripcion}" Grid.Column="1" Grid.Row="4"></Label>
+                                <Label Text="Prioridad" Grid.Column="0" Grid.Row="5"></Label>
+                                <Label Text="{Binding Prioridad}" Grid.Column="1" Grid.Row="5"></Label>
+                                <Label Text="Fecha de Entrega" Grid.Column="0" Grid.Row="6"></Label>
+                                <Label Text="{Binding Fecha}" Grid.Column="1" Grid.Row="6"></Label>
+                                <Label Text="Dependencia" Grid.Column="0" Grid.Row="7"></Label>
+                                <Label Text="{Binding Dependencia}" Grid.Column="1" Grid.Row="7"></Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="Tareas_Completadas" Text="Tareas Completadas" HorizontalOptions="Center" Clicked="Tareas_Completadas_Clicked" IsEnabled="False" IsVisible="False" BackgroundColor="Green" TextColor="White"/>
+            <Button x:Name="Todas_Tareas" Text="Todas las Tareas" HorizontalOptions="Center" Clicked="Todas_Tareas_Clicked" IsEnabled="False" IsVisible="False" BackgroundColor="Green" TextColor="White"/>
+            <Button x:Name="Tareas_Pendientes" Text="Mis Tareas" HorizontalOptions="Center" Clicked="Tareas_Pendientes_Clicked" IsEnabled="False" IsVisible="False" BackgroundColor="Green" TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

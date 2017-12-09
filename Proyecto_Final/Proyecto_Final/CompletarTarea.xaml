@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto_Final.CompletarTarea">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightGreen">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Text="Numero de tarea" Grid.Column="0" Grid.Row="0"></Label>
+                <Entry x:Name="Id" Text="{Binding Id}" Grid.Column="1" Grid.Row="0" IsEnabled="False" ></Entry>
+                <Label Text="Correo" Grid.Column="0" Grid.Row="1"></Label>
+                <Entry x:Name="Correos" Text="{Binding Correos}" Grid.Column="1" Grid.Row="1" IsEnabled="False" ></Entry>
+                <Label Text="Tarea" Grid.Column="0" Grid.Row="2"></Label>
+                <Entry x:Name="Tarea" Text="{Binding Tarea}" Grid.Column="1" Grid.Row="2" IsEnabled="False"></Entry>
+                <Label Text="Estatus" Grid.Column="0" Grid.Row="3"></Label>
+                <Entry x:Name="Estatus" Text="{Binding Estatus}" Grid.Column="1" Grid.Row="3" IsEnabled="False" ></Entry>
+                <Label Text="Descripcion de la Tarea" Grid.Column="0" Grid.Row="4"></Label>
+                <Entry x:Name="Descripcion" Text="{Binding Descripcion}" Grid.Column="1" Grid.Row="4" IsEnabled="False"></Entry>
+                <Label Text="Prioridad" Grid.Column="0" Grid.Row="5"></Label>
+                <Entry x:Name="Prioridad" Text="{Binding Prioridad}" Grid.Column="1" Grid.Row="5" IsEnabled="False" ></Entry>
+                <Label Text="Fecha de Entrega" Grid.Column="0" Grid.Row="6"></Label>
+                <DatePicker x:Name="Fecha" Date="{Binding Fecha}" Grid.Column="1" Grid.Row="6" IsEnabled="False"></DatePicker>
+                <Label Text="Dependencia" Grid.Column="0" Grid.Row="7"></Label>
+                <Entry x:Name="Dependencia" Text="{Binding Dependencia}" Grid.Column="1" Grid.Row="7" IsEnabled="False"></Entry>
+                <Button x:Name="Update" Text="Actualizar" Grid.Column="0" Grid.Row="8" Clicked="Update_Clicked" HorizontalOptions="Center" IsEnabled="False" IsVisible="False"/>
+                <Button x:Name="Delete" Text="Realizar Tarea" Grid.Column="1" Grid.Row="8" Clicked="Delete_Clicked" HorizontalOptions="Center" IsEnabled="False" IsVisible="False"/>
+                <Button x:Name="Insertar" Text="Insertar" Grid.Column="0" Grid.Row="9" Clicked="Insertar_Clicked" HorizontalOptions="Center" IsEnabled="False" IsVisible="False"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

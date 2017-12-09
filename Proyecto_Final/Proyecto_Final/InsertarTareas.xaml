@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto_Final.InsertarTareas">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightGreen">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Text="Correo" Grid.Column="0" Grid.Row="0"></Label>
+                <Entry x:Name="Correos" Grid.Column="1" Grid.Row="0" ></Entry>
+                <Label Text="Tarea" Grid.Column="0" Grid.Row="1"></Label>
+                <Entry x:Name="Tarea" Grid.Column="1" Grid.Row="1" ></Entry>
+                <Label Text="Estatus" Grid.Column="0" Grid.Row="2"></Label>
+                <Entry x:Name="Estatus" Grid.Column="1" Grid.Row="2"  ></Entry>
+                <Label Text="Descripcion de la Tarea" Grid.Column="0" Grid.Row="3"></Label>
+                <Entry x:Name="Descripcion" Grid.Column="1" Grid.Row="3" ></Entry>
+                <Label Text="Prioridad" Grid.Column="0" Grid.Row="4"></Label>
+                <Entry x:Name="Prioridad" Grid.Column="1" Grid.Row="4"></Entry>
+                <Label Text="Fecha de Entrega" Grid.Column="0" Grid.Row="5"></Label>
+                <DatePicker x:Name="Fecha" Grid.Column="1" Grid.Row="5"></DatePicker>
+                <Label Text="Dependencia" Grid.Column="0" Grid.Row="6"></Label>
+                <Entry x:Name="Dependencia" Grid.Column="1" Grid.Row="6" ></Entry>
+                <Button x:Name="Insert" Text="Insertar Tarea" Grid.Column="0" Grid.Row="7" Clicked="Insert_Clicked" HorizontalOptions="Center"/>
+           </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
